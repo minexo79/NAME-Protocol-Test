@@ -1,17 +1,22 @@
 # NAME Protocol Test
-Test NAME Message Decode Result With pynmea2 package with log.
+Test NAME Message Decode Result GUI Tools With pynmea2 package with log.
+![](img/app.png)
 
-## Required
+## Support Module
+- [x] NEO-7M
+
+# Require
 - Python 3.8 or Later
 - [Pyserial](https://pypi.org/project/pyserial/)
 - [Pynmea2](https://pypi.org/project/pynmea2/)
+- [PySimpleGui](https://pypi.org/project/PySimpleGUI/)
 
-# Using 
+# Run 
 ```
 python ./appmain.py
 ```
 
-# Config File
+## Config File
 ```ini
 [DEFAULT]
 PORT=/dev/ttyUSB0   # Port Name, In Windows Change To COMXX.
