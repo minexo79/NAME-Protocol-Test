@@ -5,11 +5,11 @@ import subprocess
 
 sg.theme('Topanga')
 
-layout_l = [[sg.Text('Gps Raw Message ($GPGGA):', size=(40,1))],
-            [sg.Multiline(size=(40,20), key='txtGpsRawMsg')]]
+layout_l = [[sg.Text('Gps Raw Message ($GPGGA):', size=(70,1))],
+            [sg.Multiline(size=(70,30), key='txtGpsRawMsg')]]
 
 layout_r = [[sg.Text('Gps Message:', size=(40,1))],
-            [sg.Multiline(size=(40,20), key='txtGpsMsg')]]
+            [sg.Multiline(size=(40,30), key='txtGpsMsg')]]
 
 layout = [[sg.Text("Port："), sg.Text(key='txtPort', size=(10,1)), sg.Text("Baud："), sg.Text(key='txtBaud', size=(10,1))],
           [sg.Col(layout_l), sg.Col(layout_r)],
@@ -17,7 +17,7 @@ layout = [[sg.Text("Port："), sg.Text(key='txtPort', size=(10,1)), sg.Text("Bau
 
 def gui_load(_port: str, _baud: str) -> bool:
     global window 
-    window = sg.Window('NMEA Test / Blackcat 2024.1.18', layout, location=(100, 100), finalize=True)
+    window = sg.Window('NMEA Test / By Blackcat 2024.1.18', layout, location=(100, 100), finalize=True)
     window['txtPort'].update(_port)
     window['txtBaud'].update(_baud)
     while True:
