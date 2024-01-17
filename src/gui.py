@@ -38,9 +38,6 @@ def gui_load(_port: str, _baud: str) -> bool:
 
 def gui_updateGpsRawMsg(rawmsg: str):
     global window 
-    if (window == None):
-        return
-    
     try:
         _msg = window['txtGpsRawMsg']
         _msg.update(rawmsg + _msg.get())
