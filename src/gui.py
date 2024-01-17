@@ -41,16 +41,19 @@ def gui_updateGpsRawMsg(rawmsg: str):
     if (window == None):
         return
     
-    _msg = window['txtGpsRawMsg']
-    _msg.update(rawmsg + _msg.get())
+    try:
+        _msg = window['txtGpsRawMsg']
+        _msg.update(rawmsg + _msg.get())
+    except Exception:
+        pass
 
 def gui_updateGpsMsg(msg: str):
     global window 
-    if (window == None):
-        return
-
-    _msg = window['txtGpsMsg']
-    _msg.update(msg + '\n' + _msg.get())
+    try:
+        _msg = window['txtGpsMsg']
+        _msg.update(msg + '\n' + _msg.get())
+    except Exception:
+        pass
 
 def gui_close():
     global window 
