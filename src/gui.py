@@ -44,7 +44,7 @@ def gui_updateGpsRawMsg(rawmsg: str):
     try:
         _msg = window['txtGpsRawMsg']
         _msg.update(rawmsg + _msg.get())
-    except Exception:
+    except NameError:
         pass
 
 def gui_updateGpsMsg(msg: str):
@@ -52,7 +52,7 @@ def gui_updateGpsMsg(msg: str):
     try:
         _msg = window['txtGpsMsg']
         _msg.update(msg + '\n' + _msg.get())
-    except Exception:
+    except NameError:
         pass
 
 def gui_close():
