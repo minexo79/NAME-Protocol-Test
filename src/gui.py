@@ -17,7 +17,8 @@ layout = [[sg.Text("Port："), sg.Text(key='txtPort', size=(10,1)), sg.Text("Bau
 
 def gui_load(_port: str, _baud: str) -> bool:
     global window 
-    window = sg.Window('NMEA Test / By Blackcat 2024.1.18', layout, location=(100, 100), finalize=True)
+    window = sg.Window('NMEA Test / By Blackcat 2024.1.18', layout, location=(100, 100), 
+                       icon="../img/icon.png", finalize=True)
     window['txtPort'].update(_port)
     window['txtBaud'].update(_baud)
     while True:
